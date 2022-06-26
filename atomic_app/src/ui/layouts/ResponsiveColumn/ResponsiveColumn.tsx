@@ -1,12 +1,13 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
+import { LayoutColumns } from '../../../interface/layout/LayoutColums'
 
 interface Props {
-    middle?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-    large?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    middle?: LayoutColumns;
+    large?: LayoutColumns;
 }
 
-const ResponsiveColum: React.FC<React.PropsWithChildren<Props>> = (props) => {
+const ResponsiveColumn: React.FC<React.PropsWithChildren<Props>> = (props) => {
     return (
         <Col
             sm="12"
@@ -17,4 +18,4 @@ const ResponsiveColum: React.FC<React.PropsWithChildren<Props>> = (props) => {
         </Col>
     )
 }
-export default ResponsiveColum;
+export default ResponsiveColumn;

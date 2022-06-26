@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button } from 'react-bootstrap'
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
 interface Props {
     // 押下時の処理

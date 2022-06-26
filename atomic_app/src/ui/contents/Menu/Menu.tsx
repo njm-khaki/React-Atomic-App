@@ -1,9 +1,9 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { MenuState } from '../../../routes/MenuRoute';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import Grid from '../../layouts/Grid/Grid';
 import { contents } from './molecule/contents';
-import { useLocation } from 'react-router-dom';
-import { MenuState } from '../../../routes/MenuRoute';
 
 /**
  * ログイン画面本体

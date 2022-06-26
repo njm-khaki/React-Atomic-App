@@ -1,13 +1,14 @@
 import React from "react";
 import ExpandedRow from "../ExpandedRow/ExpandedRow";
-import ResponsiveColum from "../ResponsiveColum/ResponsiveColum";
+import ResponsiveColumn from "../ResponsiveColumn/ResponsiveColumn";
+import { LayoutColumns } from '../../../interface/layout/LayoutColums'
 
 /**
  * グリッド表示する1つずつの情報
  */
 export interface CellElement {
-    middle?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-    large?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+    middle?: LayoutColumns;
+    large?: LayoutColumns;
     cell: React.ReactNode;
 }
 
@@ -31,12 +32,12 @@ const Grid: React.FC<Props> = (props) => {
                     (row) => <ExpandedRow>
                         {
                             row.map(
-                                (col) => <ResponsiveColum
+                                (col) => <ResponsiveColumn
                                     middle={col.middle}
                                     large={col.large}
                                 >
                                     {col.cell}
-                                </ResponsiveColum>
+                                </ResponsiveColumn>
                             )
                         }
                     </ExpandedRow>
