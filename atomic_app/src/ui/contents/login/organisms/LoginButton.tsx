@@ -9,7 +9,7 @@ interface Props {
 }
 
 /**
- * ログインボタン
+ * ユーザー名の入力欄
  * @param props 
  * @returns 
  */

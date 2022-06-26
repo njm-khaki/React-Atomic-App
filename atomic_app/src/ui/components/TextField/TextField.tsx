@@ -5,13 +5,20 @@ interface Props {
     // 入力する文字列の種類
     // text: 普通のテキスト入力
     type: `text` | `password` | `textarea`;
+    // 初期値
     default?: string;
     placeholder?: string;
     readonly?: boolean;
     rows?: number;
-    onChange?: (value: string) => Promise<void>
+    onChange?: (value: string) => Promise<void>;
+    style?: React.CSSProperties;
 }
 
+/**
+ * テキスト入力用
+ * @param props 
+ * @returns 
+ */
 const TextField: React.FC<Props> = (props) => {
     return (
         <Form.Control
@@ -38,6 +45,7 @@ const TextField: React.FC<Props> = (props) => {
                 ? props.onChange(event.target.value)
                 : () => { }
             }
+            style={props.style}
         />
     )
 }
