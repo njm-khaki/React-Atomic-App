@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const NavigationBar: React.FC = () => {

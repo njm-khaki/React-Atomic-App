@@ -8,8 +8,12 @@ interface Props {
 
 const ResponsiveColum: React.FC<React.PropsWithChildren<Props>> = (props) => {
     return (
-        <Col sm="12" md={`${props.middle ?? 6}`} lg={`${props.large ?? 4}`}>
-            { props.children }
+        <Col
+            sm="12"
+            md={`${props.middle ?? 6}`}
+            lg={`${props.large ?? 4}`}
+        >
+            {props.children}
         </Col>
     )
 }

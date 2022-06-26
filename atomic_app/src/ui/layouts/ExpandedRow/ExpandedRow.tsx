@@ -11,7 +11,9 @@ interface Props {
 
 const ExpandedRow: React.FC<React.PropsWithChildren<Props>> = (props) => {
     return (
-        <Row className={`mx-0 justify-content-${props.align ?? `center`}`}>
+        <Row 
+            className={`mx-0 justify-content-${props.align ?? `center`}`}
+        >
             { props.children }
         </Row>
     )
