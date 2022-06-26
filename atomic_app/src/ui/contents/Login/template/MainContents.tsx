@@ -1,14 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import TextField from '../../../components/TextField/TextField';
-import ElevatedButton from '../../../components/ElevatedButton/ElevatedButton';
-import ExpandedRow from '../../../layouts/ExpandedRow/ExpandedRow';
-import ResponsiveColum from '../../../layouts/ResponsiveColum/ResponsiveColum';
-import UserNameTextField from './../organisms/UserNameTextField';
-import PasswordTextField from './../organisms/PasswordTextField';
-import LoginButton from './../organisms/LoginButton';
 import { MenuRoute } from '../../../../routes/MenuRoute';
+import LoginButton from '../organism/LoginButton';
+import PasswordTextField from '../organism/PasswordTextField';
+import UserNameTextField from '../organism/UserNameTextField';
 
 /**
  * ログイン画面の基本レイアウト
@@ -35,6 +31,7 @@ const MainContents: React.FC = () => {
                 state: MenuRoute.state(userName, password),
             }
         )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [userName, password])
 
     return (

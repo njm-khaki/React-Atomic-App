@@ -1,7 +1,7 @@
 import React from 'react';
 import ElevatedButton from '../../../components/ElevatedButton/ElevatedButton';
 import ExpandedRow from '../../../layouts/ExpandedRow/ExpandedRow';
-import ResponsiveColum from '../../../layouts/ResponsiveColum/ResponsiveColum';
+import ResponsiveColumn from '../../../layouts/ResponsiveColumn/ResponsiveColumn';
 
 interface Props {
     // クリックしたときの処理
@@ -16,13 +16,13 @@ interface Props {
 const LoginButton: React.FC<Props> = (props) => {
     return (
         <ExpandedRow>
-            <ResponsiveColum>
+            <ResponsiveColumn>
                 <ElevatedButton
                     onClick={props.onClick}
                 >
                     Login
                 </ElevatedButton>
-            </ResponsiveColum>
+            </ResponsiveColumn>
         </ExpandedRow>
     );
 }

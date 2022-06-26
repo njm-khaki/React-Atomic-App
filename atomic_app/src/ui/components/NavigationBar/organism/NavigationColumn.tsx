@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
+import { Align } from './../../../../interface/layout/Align'
 
 interface Props {
-    align?: `start` | `center` | `end`;
+    align?: Align;
 }
 
 /**
