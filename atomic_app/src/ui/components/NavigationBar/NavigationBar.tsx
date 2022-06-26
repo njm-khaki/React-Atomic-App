@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Navbar, NavDropdown } from 'react-bootstrap';
-import Title from './atoms/Title';
-import NavigationColumn from './organisms/NavigationColumn';
+import Title from './atom/Title';
+import NavigationColumn from './organism/NavigationColumn';
 
 interface Props {
     username?: string;

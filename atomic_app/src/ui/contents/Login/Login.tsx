@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
-import MainContents from './templates/MainContents';
+import MainContents from './template/MainContents';
 
 /**
  * ログイン画面本体

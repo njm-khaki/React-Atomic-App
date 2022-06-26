@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import Grid from '../../layouts/Grid/Grid';
-import { contents } from './molecules/contents';
+import { contents } from './molecule/contents';
 import { useLocation } from 'react-router-dom';
 import { MenuState } from '../../../routes/MenuRoute';
 
