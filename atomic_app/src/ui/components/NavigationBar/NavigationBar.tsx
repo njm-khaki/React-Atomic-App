@@ -3,18 +3,28 @@ import { Container, Navbar, NavDropdown } from 'react-bootstrap';
 import Title from './atoms/Title';
 import NavigationColumn from './organisms/NavigationColumn';
 
-const NavigationBar: React.FC = () => {
+interface Props {
+    username?: string;
+}
+
+const NavigationBar: React.FC<Props> = (props) => {
     return (
         <Navbar bg="light" expand="lg" >
             <Container>
                 <Title />
                 <NavigationColumn>
-                    <NavDropdown title="Dropdown">
+                    <NavDropdown title={`${props.username ?? `sign in`}`}>
                         <NavDropdown.Item>Action</NavDropdown.Item>
                         <NavDropdown.Item>Another action</NavDropdown.Item>
                         <NavDropdown.Item>Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item>Separated link</NavDropdown.Item>
+                        {
+                            props.username !== undefined
+                                ? <React.Fragment>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item>Logout</NavDropdown.Item>
+                                </React.Fragment>
+                                : <React.Fragment />
+                        }
                     </NavDropdown>
                 </NavigationColumn>
             </Container>

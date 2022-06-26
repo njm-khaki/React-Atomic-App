@@ -8,6 +8,7 @@ import ResponsiveColum from '../../../layouts/ResponsiveColum/ResponsiveColum';
 import UserNameTextField from './../organisms/UserNameTextField';
 import PasswordTextField from './../organisms/PasswordTextField';
 import LoginButton from './../organisms/LoginButton';
+import { MenuRoute } from '../../../../routes/MenuRoute';
 
 /**
  * ログイン画面の基本レイアウト
@@ -28,7 +29,12 @@ const MainContents: React.FC = () => {
             return
         }
 
-        navigation(`/menu`)
+        navigation(
+            MenuRoute.pathname,
+            {
+                state: MenuRoute.state(userName, password),
+            }
+        )
     }, [userName, password])
 
     return (
